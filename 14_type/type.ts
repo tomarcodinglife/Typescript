@@ -31,7 +31,7 @@ var userDetails:DataType = {
 type a = {name:string}
 type b = {age:number}
 
-type c = a & b;
+type c = a & b; // intersection of type a and b and it only possible in type and not in interface
 
 var userDetails2: c = {
     name: "Priya Singh",
