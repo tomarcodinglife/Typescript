@@ -22,8 +22,6 @@ class Student {
         return Student.schoolName;
     } 
 
-    
-
 }
 
 
@@ -35,4 +33,3 @@ console.log(Student.schoolName); // Accessing static property directly using cla
 console.log(Student.getSchoolName()); // Accessing static method
 
 console.log(student.schoolName) // Error: Property 'schoolName' does not exist on type 'Student'.
-

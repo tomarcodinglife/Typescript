@@ -23,6 +23,8 @@ function myRandomDataReturn(): string | number | boolean | string[] {
     }
     else if (Array.isArray(data)) {
         return data;
+    }else{
+        return "Data type not supported";
     }
 }
 
