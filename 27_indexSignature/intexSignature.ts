@@ -57,5 +57,3 @@ console.log("-----------------------------------------------------------------`"
 
 console.log(`readOnlyUserDetails: ${JSON.stringify(readOnlyUserDetails)}`) // this will log the readOnlyUserDetails object with all the properties including the required and optional properties.    
 
-
-

@@ -50,6 +50,26 @@ const staff4: nonTechnicalStaff = {
     areaOfExpertise: "Recruitment"
 };
 
+interface UsersRegistration {
+    name : string, 
+    email : string,
+    password : string,
+    confirmPassword : string
+    dateOfBirth : string
+
+    [key : string] : string | number
+}
+
+let userDetails : UsersRegistration = {
+    name : "Sujit Kumar Singh", 
+    email : "sujit@test.com",
+    password : "sujit123",
+    confirmPassword : "sujit123",
+    dateOfBirth : "01/01/1999",
+    age : 27,
+    mobileNumber : 1234567890
+}
+
 
 console.log(staff1);
 console.log(staff2);
