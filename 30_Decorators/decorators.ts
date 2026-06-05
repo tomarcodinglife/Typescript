@@ -11,3 +11,12 @@ class CustomMaths {
 var customMaths = new CustomMaths(10, 20);
 
 
+class User {
+    name : string = "Sarwan Kumar";
+    age : number = 26;
+    email : string = "eamil@gmail.com";
+}
+
+
+
+
