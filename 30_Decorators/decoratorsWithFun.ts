@@ -12,7 +12,6 @@ function updateSumClass(target: any, propertyKey: string, descriptor: PropertyDe
 }   
 
 
-
 class MathFunctions {
 
 
@@ -34,6 +33,5 @@ class MathFunctions {
         }
         return number1 / number2;
     }
-
 
 }
