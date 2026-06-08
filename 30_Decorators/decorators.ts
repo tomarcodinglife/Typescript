@@ -22,7 +22,7 @@ class CustomMaths {
     }   
 }
 
-var customMaths = new CustomMaths(10, 20);
+var customMaths = new CustomMaths(10, 20); // Class Logger Decorator called
 
 @classLogger // Decorator for class : It is called when the class is defined and it receives the constructor function of the class as an argument.
 class User {

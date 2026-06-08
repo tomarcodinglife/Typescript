@@ -1,24 +1,33 @@
 function updateSumClass(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-    
-    const originalMethod = descriptor.value; // Store the original method   
+    // const originalMethod = descriptor.value;
+    descriptor.value = function (x: number, y: number) {
+        console.log(`Arguments: ${x}, ${y}`);
+        console.log("Updating the sum method to return the sum of two numbers");
+        return x + y;
+    };
+}
 
-    descriptor.value = function (...args: any[]) { // Replace the original method with a new function
-        console.log(`Arguments: ${args.join(", ")}`); // Log the arguments passed to the method
-        const result = originalMethod.apply(this, args);
-        console.log(`Result: ${result}`); // Log the result of the method
-        return result; // Return the result of the original method
+function updateMultiplyClass(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+    const originalMethod = descriptor.value; 
+    descriptor.value = function (x: number, y: number) {
+        console.log(`Arguments: ${x}, ${y}`);
 
+        const result = originalMethod.apply(this, [x, y]);
+
+        console.log("Updating the multiply method to return the product of two numbers");
+        return result;
     };
 }   
 
 
 class MathFunctions {
 
-
+    @updateSumClass
     sum(num1: number, num2: number): number {   
         return num1 + num2;
     }
 
+    @updateMultiplyClass
     multiply(number1: number, number2: number): number {
         return number1 * number2;
     }
@@ -35,3 +44,9 @@ class MathFunctions {
     }
 
 }
+
+let mathFunctions = new MathFunctions();
+console.log(mathFunctions.sum(10, 20)); // Arguments: 10, 20
+
+let result = mathFunctions.multiply(10, 20);
+console.log(result); // 200
