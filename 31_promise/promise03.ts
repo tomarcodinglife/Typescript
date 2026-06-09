@@ -10,7 +10,7 @@ function complexLogic(): Promise<User> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({
-                name : "John",
+                name : "Sujit Tomar",
                 age : 30,
                 email : "abc@gmail.com"
             }); 
