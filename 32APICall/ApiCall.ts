@@ -18,6 +18,8 @@ type User = {
     received_events_url: string;
     type: string;
     site_admin: boolean;
+    followers: number;
+    following: number;
 };
 
 interface ApiResponse {
@@ -39,6 +41,8 @@ interface ApiResponse {
     received_events_url: string;
     type: string;
     site_admin: boolean;
+    followers: number;
+    following: number;
 }
 
 
@@ -78,6 +82,8 @@ async function APIcall(): Promise <ApiResponse> {
 
 APIcall().then((data : ApiResponse) => {
     console.log(data);
+    console.log(`Followers: ${data.followers}`);
+    console.log(`Following: ${data.following}`);
 }).catch((error) => {    
     console.error("Error fetching data:", error);
 });
