@@ -1,1 +1,1 @@
-# 08_Typescript
+# Typescript
